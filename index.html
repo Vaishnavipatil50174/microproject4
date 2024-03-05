@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<body style="background-color: #3B4664
+;">
+    <div class="first">
+        <div class="rom"><input type="text"id="result"></div>
+        <div class="num">
+          
+          <div class="item" onclick="display(7)">7</div>
+          <div class="item"  onclick="display(8)">8</div>
+          <div class="item"   onclick="display(9)">9</div>
+          <div class="item"  onclick="clear_ans()">c</div>
+          <div class="item"  onclick="display(4)">4</div>
+          <div class="item"  onclick="display(5)">5</div>
+          <div class="item"  onclick="display(6)">6</div>
+          <div class="item"  onclick="display('+')">+</div>
+          <div class="item   onclick="display(1)">1</div>
+          <div class="item"  onclick="display(2)">2</div>
+          <div class="item"  onclick="display(3)">3</div>
+          <div class="item"  onclick="display('-')">-</div>
+          <div class="item"  onclick="display('.')">.</div>
+          <div class="item"  onclick="display(0)">0</div>
+          <div class="item"  onclick="display('/')">/</div>
+          <div class="item"  onclick="display('*')">*</div>
+          <div class="en" onclick="clear_ans()">Del</div>
+          <div style="background-color: #D13F30;" class="end" onclick="show()">=</div>
+          
+        </div>
+      </div>
+
+
+      <script >
+
+        
+        function display(x)
+        {
+            document.getElementById("result").value+=x
+        }
+        function show(){
+            x=document.getElementById("result").value
+            y=eval(x)
+            document.getElementById("result").value=y
+        }
+        function clear_ans(){
+            document.getElementById("result").value=""
+        }
+    </script>
+</body>
+</html>
